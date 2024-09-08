@@ -1,5 +1,5 @@
 # Preface
-This is by no means a comprehensive list of terminal commands. These are just a couple of commands I've used when working with ML on co-op, related to checking stuff like file sizes, GPU usage, etc.
+This is by no means a comprehensive list of terminal commands (in linux shells). These are just a couple of commands I've used when working with ML on co-op, related to checking stuff like file sizes, GPU usage, etc. 
 
 # Commands
 **To see your current CPU usage**, run
