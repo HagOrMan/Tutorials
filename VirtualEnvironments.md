@@ -40,10 +40,15 @@ The first option taking the latest version **available on your python version**,
 
 If that does happen, you'd want to save the current dependencies you have installed, which brings us to the next section.
 
-**To save all of your dependencies/libraries** in a `requirements.txt` file, run
+**To save all of your top level dependencies/libraries** (meaning only the packages that you pip installed) in a `requirements.txt` file, run
+```
+pip list --not-required --format=freeze > requirements.txt
+```
+**To save all of your dependencies/libraries** in a `requirements.txt` file, where you include the subdependencies (because sometimes one package installs other packages as well), run
 ```
 pip list --format=freeze > requirements.txt
 ```
+The reason I give both commands is because I have faced issues making a venv using a `requirements.txt` file created from this command. It had something to do with subdependencies in packages conflicting, so the first command with `--not-required` ensures the only packages are the ones that you directly installed.
 
 **Given a `requirements.txt` file, to install all of the dependencies**, run 
 ```
