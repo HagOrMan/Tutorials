@@ -4,6 +4,11 @@ Navigating a terminal is an essential skill as a developer. However, you'll find
 
 **So come along as I give a quick rundown on how you can begin building your *bash castle***, as well as provide my own.
 
+# What is bash?
+If you aren't using git bash or any other terminal that allows for aliases, I highly recommend it. I'm on windows, so git bash is my best way to get a Unix-like environment.  
+
+For the purposes of this tutorial, you'll need what's known as a `.bashrc` file, which controls what is done on startup of your terminal as well as allows you to create `aliases`, the main focus here. If it doesn't exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
+
 # My files
 While you can absolutely start building your bash castle from scratch, here's what I've done so far to help you get started and maybe give some inspiration.
 
