@@ -6,4 +6,4 @@ This repository contains tutorials on things that I wish I knew, had trouble fin
 * [Advanced Terminal Commands](TerminalCommands.md) - Very short file on commands I've needed in the terminal when doing ML work (on co-op so not comprehensive by any means). If you want basic bash scripting, I recommend [this link](https://devhints.io/bash).
 
 # How you can contribute
-Feel free to fork this repository, make your own tutorial/suggest updates to an existing one, and create a pull request. I'll review your changes, and if I accept them, you can now say you've contributed to an open-source project that aims to help others! You'll also get to add yourself to the [contributions doc](Contributions.md) if you'd like, and have everyone know what a helpful person you are.
+Feel free to fork this repository, make your own tutorial/suggest updates to an existing one, and create a pull request. I'll review your changes, and if I accept them, you can now say you've contributed to a project that aims to help others! You'll also get to add yourself to the [contributions doc](Contributions.md) if you'd like, and have everyone know what a helpful person you are.
