@@ -27,10 +27,12 @@ The -h makes it "human-readable". I have used this when downloading huggingface 
 
 As a fun segway from that, I then wanted to save the models to my mount folder so they wouldn't take up cache space. However, this meant I needed to add permissions to that folder in order to choose it as a download location. 
 
-**To give permissions to `/mnt`**, or I guess any other folder, run
+**To give permissions to `/mnt`**, or I guess any other folder/file, run
 ```
 sudo chmod -R 777 /mnt
 ```
+The `777` means everyone who accesses the file has full permissions for it. If that isn't what you want, look into permissions and how you can change those 7s to other numbers so select users on the machine can only read/write/execute.  
+The `sudo` also effectively runs the command as an admin, so be careful when using `sudo` because it lets you do far more than running commands without it.
 
 **To see the file size of everything in your current directory**, run
 ```

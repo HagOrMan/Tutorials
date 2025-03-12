@@ -1,20 +1,22 @@
 # Why should you care?
 Navigating a terminal is an essential skill as a developer. However, you'll find that some common commands get tiring to type out every time. That's a lot of *friction* in your development. **The solution?**
-> Bash aliases, a quick way to turn a command like `git checkout` into something as short as `gco`
+> Bash aliases, a quick way to turn a command like `git checkout` into something short like `gco`
 
-**So come along as I give a quick rundown on how you can begin building your *bash castle***, as well as provide my own.
+**So come along as I give a quick rundown on how you can begin building your *bash castle***, consisting of functions to massively improve your efficiency and reduce characters typed by at least 75\%.
 
 # What is bash?
+I use bash as a short form for "bash terminal", which in this tutorial means a Unix-like terminal. If you're familiar with Command Prompt or Powershell on Windows, those are two other terminal examples.  
+
 If you aren't using git bash or any other terminal that allows for aliases, I highly recommend it. I'm on windows, so git bash is my best way to get a Unix-like environment.  
 
-For the purposes of this tutorial, you'll need what's known as a `.bashrc` file, which controls what is done on startup of your terminal as well as allows you to create `aliases`, the main focus here. If it doesn't exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
+For the purposes of this tutorial, you'll need what's known as a `.bashrc` file. This controls what is done on initialization of your terminal as well as allows you to create `aliases`, the main focus here. If it doesn't exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
 
 # My files
 While you can absolutely start building your bash castle from scratch, here's what I've done so far to help you get started and maybe give some inspiration.
 
 - [utility functions](./helper-files/bash/util.bashrc). **Highly recommend at least checking out `confirm_action` which is extremely useful for never accidentally doing something catastrophic**
 - [useful git aliases](./helper-files/bash/git.bashrc). Almost every git command you'll need in common development
-= [terminal commands](./helper-files/bash/terminal.bashrc). Currently a small list, but might grow as I start doing cooler things in the terminal. (most things in the terminal are already pretty concise though)
+- [terminal commands](./helper-files/bash/terminal.bashrc). Currently a small list, but might grow as I start doing cooler things in the terminal. (most things in the terminal are already pretty concise though)
 - [venv helpers](./helper-files/bash/venv.bashrc). My classic venv commands that I use for every new project and want to stop typing out fully
 
 # Setting up your castle
@@ -31,7 +33,7 @@ As you probably know, classic commands like `ls` and `ls -a` or even `ls -al` ar
 
 For example, in my [`util.bashrc`](./helper-files/bash/util.bashrc) file, I have a `confirm_action` function which lets me lock dangerous commands, like discarding all my changes in git, behind a confirmation that asks me if I'm sure I'd like to do that.
 
-> As you try new things and start developing, figure out what commands you run often. If you're taking a while to do something, look it up, as an AI model, and see if there's a faster way to do it. Eventually, you'll find complex commands that would go great behind a bash alias.
+> As you try new things and start developing, figure out what commands you run often. If you're taking a while to do something, look it up, ask an AI model, and see if there's a faster way to do it. Eventually, you'll find complex commands that would go great behind a bash alias.
 
 For me, a lot of my aliases are also git commands that I run often. **I do anything to reduce friction in my development**, even turning something as short as `git log` into `gl`.
 > Keep your commands simple so you can easily add onto them
