@@ -5,7 +5,7 @@ Navigating a terminal is an essential skill as a developer. However, you'll find
 **So come along as I give a quick rundown on how you can begin building your *bash castle***, consisting of functions to massively improve your efficiency and reduce characters typed by at least 75\%.
 
 # What is bash?
-I use bash as a short form for "bash terminal", which in this tutorial means a Unix-like terminal. If you're familiar with Command Prompt or Powershell on Windows, those are two other terminal examples.  
+I use bash as a short form for "bash terminal", which in this tutorial means a Unix-like terminal. If you're familiar with Command Prompt or Powershell on Windows, those are two other terminal examples. However, they are Windows-based and do not apply to this tutorial.  
 
 If you aren't using git bash or any other terminal that allows for aliases, I highly recommend it. I'm on windows, so git bash is my best way to get a Unix-like environment.  
 
@@ -16,7 +16,7 @@ While you can absolutely start building your bash castle from scratch, here's wh
 
 - [utility functions](./helper-files/bash/util.bashrc). **Highly recommend at least checking out `confirm_action` which is extremely useful for never accidentally doing something catastrophic**
 - [useful git aliases](./helper-files/bash/git.bashrc). Almost every git command you'll need in common development
-- [terminal commands](./helper-files/bash/terminal.bashrc). Currently a small list, but might grow as I start doing cooler things in the terminal. (most things in the terminal are already pretty concise though)
+- [terminal commands](./helper-files/bash/terminal.bashrc). Currently a small list, but might grow as I start doing cooler things in the terminal. (most commands in the terminal are already pretty concise though)
 - [venv helpers](./helper-files/bash/venv.bashrc). My classic venv commands that I use for every new project and want to stop typing out fully
 
 # Setting up your castle
