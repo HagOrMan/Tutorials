@@ -11,6 +11,15 @@ If you aren't using git bash or any other terminal that allows for aliases, I hi
 
 For the purposes of this tutorial, you'll need what's known as a `.bashrc` file. This controls what is done on initialization of your terminal as well as allows you to create `aliases`, the main focus here. If it doesn't exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
 
+<details>
+    <summary>How do I create the bashrc file?</summary>
+
+    cd ~
+    vim .bashrc
+    # if you don't have vim, nano and vi are other text editors you can use
+
+</details>
+
 # My files
 While you can absolutely start building your bash castle from scratch, here's what I've done so far to help you get started and maybe give some inspiration.
 
