@@ -31,8 +31,9 @@ While you can absolutely start building your bash castle from scratch, here's wh
 
 # Setting up your castle
 ## Put it all together
-I'll start with the "once you're done" because maybe you already have some ideas and want to know how to make your aliases available. I recommend separating your aliases into clearly defined files such as `git.bashrc` (for all git related aliases) since it's easier to manage. Once you have a file ready, take your `.bashrc` file at the root (`~/`) directory and for each alias file, add lines such as
+I'll start with the "once you're done" because maybe you already have some ideas and want to know how to make your aliases available. I recommend separating your aliases into clearly defined files such as `git.bashrc` (for all git related aliases) since it's easier to manage. Once you have an alias file ready, take your `.bashrc` file at the root (`~/`) directory and for each alias file, add lines to `~/.bashrc` such as
 ```bash
+# .bashrc file
 source ~/git.bashrc
 ```
 This will make all aliases in that file available for use in your bash terminal. But first, you need to run the following in your terminal (or just restart your terminal) to "activate" them
