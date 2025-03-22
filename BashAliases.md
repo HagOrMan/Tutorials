@@ -8,9 +8,9 @@ Navigating a terminal is an essential skill as a developer. However, you'll find
 # What is bash?
 I use bash as a short form for "bash terminal", which in this tutorial means a Unix-like terminal. If you're familiar with Command Prompt or Powershell on Windows, those are two other terminal examples. However, they are Windows-based and do not apply to this tutorial.  
 
-If your terminal doesn’t support aliases, I highly recommend using Git Bash or another Unix-like terminal. I'm on windows, so Git Bash is my best way to get a Unix-like environment.  
+If your terminal doesn’t support aliases, I highly recommend using Git Bash or another Unix-like terminal. I'm on Windows, so Git Bash is my best way to get a Unix-like environment.  
 
-For the purposes of this tutorial, you'll need what's known as a `.bashrc` file. This is found in your root directory, `~/`. It controls what is done on initialization of your terminal as well as allows you to create `aliases`, the main focus here. If it doesn't already exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
+For this tutorial, you'll need what's known as a `.bashrc` file. This is found in your root directory, `~/`. It controls what is done on initialization of your terminal as well as allows you to create `aliases`, the main focus here. If it doesn't already exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
 
 <details>
     <summary>How do I create the bashrc file?</summary>
@@ -22,7 +22,7 @@ For the purposes of this tutorial, you'll need what's known as a `.bashrc` file.
 </details>
 
 # My files
-While you can absolutely start building your bash castle from scratch, here's what I've done so far to help you get started and maybe give some inspiration. If you've never heard of aliases before, it might be helpful to read the rest of the tutoirial before checking these out.
+While you can absolutely start building your bash castle from scratch, here's what I've done so far to help you get started and maybe give some inspiration. If you've never heard of aliases before, it might be helpful to read the rest of the tutorial before checking these out.
 
 - [utility functions](./helper-files/bash/util.bashrc). **Highly recommend at least checking out `confirm_action` which is extremely useful for never accidentally doing something catastrophic**
 - [useful git aliases](./helper-files/bash/git.bashrc). Almost every git command you'll need in common development
@@ -31,7 +31,7 @@ While you can absolutely start building your bash castle from scratch, here's wh
 
 # Setting up your castle
 ## Put it all together
-I'll start with the "once you're done" because maybe you already have some ideas and want to know how to make your aliases available. I recommend separating your aliases into clearly defined files such as `git.bashrc` (for all git related aliases) since it's easier to manage. Once you have an alias file ready, take your `.bashrc` file at the root (`~/`) directory and for each alias file, add lines to `~/.bashrc` such as
+I'll start with the "once you're done" because maybe you already have some ideas and want to know how to make your aliases available. I recommend separating your aliases into clearly defined files such as `git.bashrc` (for all git-related aliases) since it's easier to manage. Once you have an alias file ready, take your `.bashrc` file at the root (`~/`) directory, and for each alias file add lines to `~/.bashrc` such as
 ```bash
 # .bashrc file
 source ~/git.bashrc
@@ -45,12 +45,12 @@ source ~/.bashrc
 As you probably know, classic commands like `ls` and `ls -a` or even `ls -al` are already short enough that you don't need to optimize them.
 > What's really useful is **longer commands** and commands that **require some scripting to work**.
 
-You can write functions and then use them in an alias to achieve powerful outcomes. For example, in my [`util.bashrc`](./helper-files/bash/util.bashrc) file, I have a `confirm_action` function which lets me lock dangerous commands (e.g. discarding all my changes in git) behind a confirmation that asks me if I'm sure I'd like to do that.
+You can write functions and then use them in an alias to achieve powerful outcomes. For example, in my [`util.bashrc`](./helper-files/bash/util.bashrc) file, I have a `confirm_action` function that lets me lock dangerous commands (e.g. discarding all my changes in git) behind a confirmation that asks me if I'm sure I'd like to do that.
 
 > As you try new things and start developing, figure out what commands you run often. If you're taking a while to do something, look it up, ask an AI model, and see if there's a faster way to do it. Eventually, you'll find complex commands that would go great behind a bash alias.
 
 For me, a lot of my aliases are also git commands that I run often. **I do anything to reduce friction in my development**, even turning something as short as `git log` into `gl`.
-> Keep your commands simple so you can easily add onto them
+> Keep your commands simple so you can easily add to them
 
 With `gl`, I can specify more values that would come after `git log` if I wrote it out fully. For example, I can run `gl --oneline` instead of `git log --oneline`.
 
