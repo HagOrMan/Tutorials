@@ -1,8 +1,7 @@
 # Why should you care?
 Navigating a terminal is an essential skill as a developer. However, you'll find that some common commands get tiring to type out every time. That's a lot of *friction* in your development. **The solution?**
 
-| Bash aliases, a quick way to turn a command like `git checkout` into something short like `gco` |
-| --- |
+> Bash aliases, a quick way to turn a command like `git checkout` into something short like `gco`
 
 **So come along as I give a quick rundown on how you can begin building your *bash castle***, consisting of aliases to massively improve your efficiency and reduce characters typed by at least 75\%.
 
