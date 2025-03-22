@@ -3,12 +3,12 @@ Navigating a terminal is an essential skill as a developer. However, you'll find
 
 > Bash aliases, a quick way to turn a command like `git checkout` into something short like `gco`
 
-**So come along as I give a quick rundown on how you can begin building your *bash castle***, consisting of aliases to massively improve your efficiency and reduce characters typed by at least 75\%.
+**So come along as I give a quick rundown on how you can begin building your *bash castle***, a collection of aliases to massively improve your efficiency and reduce characters typed by at least 75\%.
 
 # What is bash?
-I use bash as a short form for "bash terminal", which in this tutorial means a Unix-like terminal. If you're familiar with Command Prompt or Powershell on Windows, those are two other terminal examples. However, they are Windows-based and do not apply to this tutorial.  
+I use bash as a short form for "bash terminal", which in this tutorial means a Unix-like terminal. If you're familiar with Command Prompt or Powershell on Windows, those are two other terminal examples. However, they have no Unix-like functionality and do not apply to this tutorial.
 
-If your terminal doesn’t support aliases, I highly recommend using Git Bash or another Unix-like terminal. I'm on Windows, so Git Bash is my best way to get a Unix-like environment.  
+If your terminal doesn’t support aliases, I highly recommend using Git Bash or another Unix-like terminal. I'm on Windows, so Git Bash is the simplest way to get a Unix-like environment <sup>[\[1\]](#extra-resources)</sup>. 
 
 For this tutorial, you'll need what's known as a `.bashrc` file. This is found in your root directory, `~/`. It controls what is done on initialization of your terminal as well as allows you to create `aliases`, the main focus here. If it doesn't already exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
 
@@ -27,16 +27,16 @@ While you can absolutely start building your bash castle from scratch, here's wh
 - [utility functions](./helper-files/bash/util.bashrc). **Highly recommend at least checking out `confirm_action` which is extremely useful for never accidentally doing something catastrophic**
 - [useful git aliases](./helper-files/bash/git.bashrc). Almost every git command you'll need in common development
 - [terminal commands](./helper-files/bash/terminal.bashrc). Currently a small list, but might grow as I start doing cooler things in the terminal. (most commands in the terminal are already pretty concise though)
-- [venv helpers](./helper-files/bash/venv.bashrc). My classic venv commands that I use for every new project and want to stop typing out fully
+- [venv helpers](./helper-files/bash/venv.bashrc). Commands for virtual environments to speed up their creation and use
 
 # Setting up your castle
 ## Put it all together
-I'll start with the "once you're done" because maybe you already have some ideas and want to know how to make your aliases available. I recommend separating your aliases into clearly defined files such as `git.bashrc` (for all git-related aliases) since it's easier to manage. Once you have an alias file ready, take your `.bashrc` file at the root (`~/`) directory, and for each alias file add lines to `~/.bashrc` such as
+Let's start by talking about how to make your aliases available in case you already have some ideas. I recommend separating your aliases into clearly defined files such as `git.bashrc` (for all git-related aliases) since it's easier to manage. Once you have an alias file ready, take your `.bashrc` file at the root (`~/`) directory, and for each alias file add lines to `~/.bashrc` such as
 ```bash
 # .bashrc file
 source ~/git.bashrc
 ```
-This will make all aliases in that file available for use in your bash terminal. But first, you need to run the following in your terminal (or just restart your terminal) to "activate" them
+Now, run the following in your terminal (or just restart your terminal) to "activate" the file
 ```bash
 source ~/.bashrc
 ```
@@ -62,3 +62,6 @@ A good example is `git log --all --graph --oneline --decorate -n 25`, which I al
 I'm trying to keep this short and sweet, so hopefully the above gives enough inspiration to get you building without overloading the details. **At the end of the day, you will build what is best for you,** and maybe you'll find a better way to do things (and please let me know if you do).  
 
 Feel free to open an issue on this repo if you want any help or have questions for me!
+
+# Extra Resources
+\[1\] While Git Bash is the most lightweight Unix-like terminal on Windows that I've found, some alternatives exist. Windows has what's called [**Windows Subsystem for Linux (WSL)**](https://learn.microsoft.com/en-us/windows/wsl/install) that allows you to install a Linux distribution with much more functionality than Git Bash (but is conversely less lightweight).
