@@ -35,7 +35,7 @@ I'll start with the "once you're done" because maybe you already have some ideas
 ```bash
 source ~/git.bashrc
 ```
-This will make all aliases in that file available for use in your bash terminal. But first, you need to run the following in your terminal (or just restart your terminal)
+This will make all aliases in that file available for use in your bash terminal. But first, you need to run the following in your terminal (or just restart your terminal) to "activate" them
 ```bash
 source ~/.bashrc
 ```
