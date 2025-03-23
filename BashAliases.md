@@ -20,7 +20,6 @@ For this tutorial, you'll need what's known as a `.bashrc` file. This is found i
     # if you don't have vim, nano and vi are other text editors you can use
 
 </details>
-<br/>
 
 # My files
 While you can absolutely start building your bash castle from scratch, here's what I've done so far to help you get started and maybe give some inspiration. If you've never heard of aliases before, it might be helpful to read the rest of the tutorial before checking these out.
