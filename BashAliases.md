@@ -3,12 +3,12 @@ Navigating a terminal is an essential skill as a developer. However, you'll find
 
 > Bash aliases, a quick way to turn a command like `git checkout` into something short like `gco`
 
-**So come along as I give a quick rundown on how you can begin building your *bash castle***, a collection of aliases to massively improve your efficiency and reduce characters typed by at least 75\%.
+**So come along as I give a quick rundown on how you can begin building your *bash castle***, a collection of aliases to massively improve your efficiency and reduce characters typed by at least 75\% <sup>[\[1\]](#extra-resources)</sup>.
 
 # What is bash?
 This tutorial uses bash as a short form for "bash terminal", which refers to a Unix-like terminal. These terminals support aliases, whereas the default Windows terminals (e.g. Command Prompt and Powershell) do not.
 
-If your terminal doesn’t support aliases, I highly recommend using Git Bash or another Unix-like terminal. I'm on Windows, so Git Bash is the simplest option <sup>[\[1\]](#extra-resources)</sup>.
+If your terminal doesn’t support aliases, I highly recommend using Git Bash or another Unix-like terminal. I'm on Windows, so Git Bash is the simplest option <sup>[\[2\]](#extra-resources)</sup>.
 
 For this tutorial, you'll need what's known as a `.bashrc` file. This is found in your root directory, `~/`. It controls what is done on initialization of your terminal as well as allows you to create `aliases`, the main focus here. If it doesn't already exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
 
@@ -63,5 +63,7 @@ I'm trying to keep this short and sweet, so hopefully the above gives enough ins
 
 Feel free to open an issue on this repo if you want any help or have questions for me!
 
-# Extra Resources
-\[1\] While Git Bash is the most lightweight Unix-like terminal on Windows that I've found, some alternatives exist. Windows has what's called [**Windows Subsystem for Linux (WSL)**](https://learn.microsoft.com/en-us/windows/wsl/install) that allows you to install a Linux distribution with much more functionality than Git Bash (but is conversely less lightweight).
+# Extra Notes
+\[1\] The 75% statistic was taken by looking at all of my current aliases, especially the ones I use most like `git status` &#8594; `gs` (10 characters &#8594; 2 characters), and the fact that using functions in aliases drastically reduces keystrokes. If you write a couple short aliases and are satisfied, you may benefit from a 30-50% keystroke reduction instead.
+
+\[2\] While Git Bash is the most lightweight Unix-like terminal on Windows that I've found, some alternatives exist. Windows has what's called [**Windows Subsystem for Linux (WSL)**](https://learn.microsoft.com/en-us/windows/wsl/install) that allows you to install a Linux distribution with much more functionality than Git Bash (but is conversely less lightweight).
