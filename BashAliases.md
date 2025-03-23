@@ -6,9 +6,9 @@ Navigating a terminal is an essential skill as a developer. However, you'll find
 **So come along as I give a quick rundown on how you can begin building your *bash castle***, a collection of aliases to massively improve your efficiency and reduce characters typed by at least 75\%.
 
 # What is bash?
-I use bash as a short form for "bash terminal", which in this tutorial means a Unix-like terminal. If you're familiar with Command Prompt or Powershell on Windows, those are two other terminal examples. However, they have no Unix-like functionality and do not apply to this tutorial.
+This tutorial uses bash as a short form for "bash terminal", which refers to a Unix-like terminal. These terminals support aliases, whereas the default Windows terminals (e.g. Command Prompt and Powershell) do not.
 
-If your terminal doesn’t support aliases, I highly recommend using Git Bash or another Unix-like terminal. I'm on Windows, so Git Bash is the simplest way to get a Unix-like environment <sup>[\[1\]](#extra-resources)</sup>. 
+If your terminal doesn’t support aliases, I highly recommend using Git Bash or another Unix-like terminal. I'm on Windows, so Git Bash is the simplest option <sup>[\[1\]](#extra-resources)</sup>.
 
 For this tutorial, you'll need what's known as a `.bashrc` file. This is found in your root directory, `~/`. It controls what is done on initialization of your terminal as well as allows you to create `aliases`, the main focus here. If it doesn't already exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
 
@@ -20,6 +20,7 @@ For this tutorial, you'll need what's known as a `.bashrc` file. This is found i
     # if you don't have vim, nano and vi are other text editors you can use
 
 </details>
+<br/>
 
 # My files
 While you can absolutely start building your bash castle from scratch, here's what I've done so far to help you get started and maybe give some inspiration. If you've never heard of aliases before, it might be helpful to read the rest of the tutorial before checking these out.
