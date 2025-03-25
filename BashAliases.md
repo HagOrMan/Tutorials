@@ -1,5 +1,5 @@
-# Why should you care?
-Navigating a terminal is an essential skill as a developer. However, you'll find that some common commands get tiring to type out every time. That's a lot of *friction* in your development. **The solution?**
+# Why should you care about bash aliases?
+Navigating a terminal is an essential skill as a developer. However, you'll find that some common commands get tiring to type out every time. That's a lot of friction in your development. **The solution?**
 
 > Bash aliases, a quick way to turn a command like `git checkout` into something short like `gco`
 
@@ -21,17 +21,11 @@ For this tutorial, you'll need what's known as a `.bashrc` file. This is found i
 
 </details>
 
-# My files
-While you can absolutely start building your bash castle from scratch, here's what I've done so far to help you get started and maybe give some inspiration. If you've never heard of aliases before, it might be helpful to read the rest of the tutorial before checking these out.
-
-- [utility functions](./helper-files/bash/util.bashrc). **Highly recommend at least checking out `confirm_action` which is extremely useful for never accidentally doing something catastrophic**
-- [useful git aliases](./helper-files/bash/git.bashrc). Almost every git command you'll need in common development
-- [terminal commands](./helper-files/bash/terminal.bashrc). Currently a small list, but might grow as I start doing cooler things in the terminal. (most commands in the terminal are already pretty concise though)
-- [venv helpers](./helper-files/bash/venv.bashrc). Commands for virtual environments to speed up their creation and use
-
 # Setting up your castle
 ## Put it all together
-Let's start by talking about how to make your aliases available in case you already have some ideas. I recommend separating your aliases into clearly defined files such as `git.bashrc` (for all git-related aliases) since it's easier to manage. Once you have an alias file ready, take your `.bashrc` file at the root (`~/`) directory, and for each alias file add lines to `~/.bashrc` such as
+Let's start by talking about how to make your aliases available in case you already have some ideas. If you want inspiration, you can skip to my aliases [here](#templates-to-help-you-get-started). 
+
+I recommend separating your aliases into clearly defined files such as `git.bashrc` (for all git-related aliases) since it's easier to manage. Once you have an alias file ready, take your `.bashrc` file at the root (`~/`) directory, and for each alias file add lines to `~/.bashrc` such as
 ```bash
 # .bashrc file
 source ~/git.bashrc
@@ -62,6 +56,14 @@ A good example is `git log --all --graph --oneline --decorate -n 25`, which I al
 I'm trying to keep this short and sweet, so hopefully the above gives enough inspiration to get you building without overloading the details. **At the end of the day, you will build what is best for you,** and maybe you'll find a better way to do things (and please let me know if you do).  
 
 Feel free to open an issue on this repo if you want any help or have questions for me!
+
+# Templates to help you get started
+While you can absolutely start building your bash castle from scratch, here's what I've done so far to help you get started and maybe give some inspiration.
+
+- [utility functions](./helper-files/bash/util.bashrc). **Highly recommend at least checking out `confirm_action` which is extremely useful for never accidentally doing something catastrophic**
+- [useful git aliases](./helper-files/bash/git.bashrc). Almost every git command you'll need in common development
+- [terminal commands](./helper-files/bash/terminal.bashrc). Currently a small list, but might grow as I start doing cooler things in the terminal. (most commands in the terminal are already pretty concise though)
+- [venv helpers](./helper-files/bash/venv.bashrc). Commands for virtual environments to speed up their creation and use
 
 # Extra Notes
 \[1\] The 75% statistic was taken by looking at all of my current aliases, especially the ones I use most like `git status` &#8594; `gs` (10 characters &#8594; 2 characters), and the fact that using functions in aliases drastically reduces keystrokes. If you write a couple short aliases and are satisfied, you may benefit from a 30-50% keystroke reduction instead.
