@@ -3,17 +3,17 @@ Navigating a terminal is an essential skill as a developer. However, you'll find
 
 > Bash aliases, a quick way to turn a command like `git checkout` into something short like `gco`
 
-**So come along as I give a quick rundown on how you can begin building your *bash castle***, a collection of aliases to massively improve your efficiency and reduce characters typed by at least 75\% <sup>[\[1\]](#extra-resources)</sup>.
+**So come along as I give a quick rundown on how you can begin building your *bash castle***, a collection of aliases to massively improve your efficiency and reduce characters typed by at least 75\% <sup>[\[1\]](#extra-notes)</sup>.
 
 # What is bash?
 This tutorial uses bash as a short form for "bash terminal", which refers to a Unix-like terminal. These terminals support aliases, whereas the default Windows terminals (e.g. Command Prompt and Powershell) do not.
 
-If your terminal doesn’t support aliases, I highly recommend using Git Bash or another Unix-like terminal. I'm on Windows, so Git Bash is the simplest option <sup>[\[2\]](#extra-resources)</sup>.
+If your terminal doesn’t support aliases, I highly recommend using Git Bash or another Unix-like terminal. I'm on Windows, so Git Bash is the simplest option <sup>[\[2\]](#extra-notes)</sup>.
 
 For this tutorial, you'll need what's known as a `.bashrc` file. This is found in your root directory, `~/`. It controls what is done on initialization of your terminal as well as allows you to create `aliases`, the main focus here. If it doesn't already exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
 
 <details>
-    <summary>How do I create the bashrc file?</summary>
+    <summary>How do I create the bashrc file? <a href="#extra-notes"><sup>[3]</sup></a></summary>
 
     cd ~
     vim .bashrc
@@ -69,3 +69,5 @@ While you can absolutely start building your bash castle from scratch, here's wh
 \[1\] The 75% statistic was taken by looking at all of my current aliases, especially the ones I use most like `git status` &#8594; `gs` (10 characters &#8594; 2 characters), and the fact that using functions in aliases drastically reduces keystrokes. If you write a couple short aliases and are satisfied, you may benefit from a 30-50% keystroke reduction instead.
 
 \[2\] While Git Bash is the most lightweight Unix-like terminal on Windows that I've found, some alternatives exist. Windows has what's called [**Windows Subsystem for Linux (WSL)**](https://learn.microsoft.com/en-us/windows/wsl/install) that allows you to install a Linux distribution with much more functionality than Git Bash (but is conversely less lightweight).
+
+\[3\] To create the file, you can either go through your file explorer or terminal. If you're using the terminal, there are multiple file editors that you can use. I use [vim](https://github.com/vim/vim), and if you're confused on how to edit or save files, I recommend [this tutorial](https://opensource.com/article/19/3/getting-started-vim).
