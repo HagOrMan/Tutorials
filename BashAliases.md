@@ -1,11 +1,11 @@
-# Why should you care about bash aliases?
+# Why Should You Care About Bash Aliases?
 Navigating a terminal is an essential skill as a developer. However, you'll find that some common commands get tiring to type out every time. That's a lot of friction in your development. **The solution?**
 
 > Bash aliases, a quick way to turn a command like `git checkout` into something short like `gco`
 
 **So come along as I give a quick rundown on how you can begin building your *bash castle***, a collection of aliases to massively improve your efficiency and reduce characters typed by at least 75\% <sup>[\[1\]](#extra-notes)</sup>.
 
-# What is bash?
+# What Is Bash?
 This tutorial uses bash as a short form for "bash terminal", which refers to a Unix-like terminal. These terminals support aliases, whereas the default Windows terminals (e.g. Command Prompt and Powershell) do not.
 
 If your terminal doesn’t support aliases, I highly recommend using Git Bash or another Unix-like terminal. I'm on Windows, so Git Bash is the simplest option <sup>[\[2\]](#extra-notes)</sup>.
@@ -21,8 +21,8 @@ For this tutorial, you'll need what's known as a `.bashrc` file. This is found i
 
 </details>
 
-# Setting up your castle
-## Put it all together
+# Setting Up Your Castle
+## Put It All Together
 Let's start by talking about how to make your aliases available in case you already have some ideas. If you want inspiration, you can skip to my aliases [here](#templates-to-help-you-get-started). 
 
 I recommend separating your aliases into clearly defined files such as `git.bashrc` (for all git-related aliases) since it's easier to manage. Once you have an alias file ready, take your `.bashrc` file at the root (`~/`) directory, and for each alias file add lines to `~/.bashrc` such as
@@ -35,7 +35,7 @@ Now, run the following in your terminal (or just restart your terminal) to "acti
 source ~/.bashrc
 ```
 
-## What should you make?
+## What Should You Make?
 As you probably know, classic commands like `ls` and `ls -a` or even `ls -al` are already short enough that you don't need to optimize them.
 > What's really useful is **longer commands** and commands that **require some scripting to work**.
 
@@ -52,12 +52,12 @@ With `gl`, I can specify more values that would come after `git log` if I wrote 
 
 A good example is `git log --all --graph --oneline --decorate -n 25`, which I alias with the simple `glg`. It produces a nice tree graph similar to what you'd see on VS Code.
 
-# Finishing notes
+# Finishing Notes
 I'm trying to keep this short and sweet, so hopefully the above gives enough inspiration to get you building without overloading the details. **At the end of the day, you will build what is best for you,** and maybe you'll find a better way to do things (and please let me know if you do).  
 
 Feel free to open an issue on this repo if you want any help or have questions for me!
 
-# Templates to help you get started
+# Templates To Help You Get Started
 While you can absolutely start building your bash castle from scratch, here's what I've done so far to help you get started and maybe give some inspiration.
 
 - [utility functions](./helper-files/bash/util.bashrc). **Highly recommend at least checking out `confirm_action` which is extremely useful for never accidentally doing something catastrophic**
