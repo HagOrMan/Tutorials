@@ -4,7 +4,7 @@
 source ~/util.bashrc
 
 alias gl='git log'
-alias glg='git log --all --graph --oneline --decorate -n 25'
+alias glg='git log --all --graph --oneline --decorate'
 alias diff-words="git diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'"
 alias changedfiles='git diff-tree --no-commit-id -r --name-only'
 

@@ -1,16 +1,16 @@
 # Why Should You Care About Bash Aliases?
-Navigating a terminal is an essential skill as a developer. However, you'll find that some common commands get tiring to type out every time. That's a lot of friction in your development. **The solution?**
+The reason you're using `git log` and not `git log --all --graph --oneline --decorate`, even though it could **change your life as a developer** (seriously, try it right now), is because it's too long to type and too hard to remember.
 
-> Bash aliases, a quick way to turn a command like `git checkout` into something short like `gco`
+But what if you could have it **both ways**? With **bash aliases**, you can turn long, tedious commands into **effortless shortcuts**, like typing `glg` instead of that entire command above.
 
-**So come along as I give a quick rundown on how you can begin building your *bash castle***, a collection of aliases to massively improve your efficiency and reduce characters typed by at least 75\% <sup>[\[1\]](#extra-notes)</sup>.
+**So let's get started! I'll show you how to begin building your *bash castle***, a collection of aliases to massively improve your efficiency and reduce characters typed by at least 75\% <sup>[\[1\]](#extra-notes)</sup>.
 
 # What Is Bash?
 This tutorial uses bash as a short form for "bash terminal", which refers to a Unix-like terminal. These terminals support aliases, whereas the default Windows terminals (e.g. Command Prompt and Powershell) do not.
 
 If your terminal doesn’t support aliases, I highly recommend using Git Bash or another Unix-like terminal. I'm on Windows, so Git Bash is the simplest option <sup>[\[2\]](#extra-notes)</sup>.
 
-For this tutorial, you'll need what's known as a `.bashrc` file. This is found in your root directory, `~/`. It controls what is done on initialization of your terminal as well as allows you to create `aliases`, the main focus here. If it doesn't already exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
+For this tutorial, you'll need what's known as a `.bashrc` file. This is found in your home directory, `~/`. It controls what is done on initialization of your terminal as well as allows you to create `aliases`, the main focus here. If it doesn't already exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
 
 <details>
     <summary>How do I create the bashrc file? <a href="#extra-notes"><sup>[3]</sup></a></summary>
@@ -25,7 +25,7 @@ For this tutorial, you'll need what's known as a `.bashrc` file. This is found i
 ## Put It All Together
 Let's start by talking about how to make your aliases available in case you already have some ideas. If you want inspiration, you can skip to my aliases [here](#templates-to-help-you-get-started). 
 
-I recommend separating your aliases into clearly defined files such as `git.bashrc` (for all git-related aliases) since it's easier to manage. Once you have an alias file ready, take your `.bashrc` file at the root (`~/`) directory, and for each alias file add lines to `~/.bashrc` such as
+I recommend separating your aliases into clearly defined files such as `git.bashrc` (for all git-related aliases) since it's easier to manage. Once you have an alias file ready, take your `.bashrc` file at the home (`~/`) directory, and for each alias file add lines to `~/.bashrc` such as
 ```bash
 # .bashrc file
 source ~/git.bashrc
