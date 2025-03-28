@@ -14,3 +14,7 @@ alias fk='function _force_kill() { confirm_action "force kill this process" "kil
 alias mv='mv -i'                     # Prevent accidental overwrites when moving files
 alias rm='rm -i'                     # Ask before deleting files
 
+findbig() {
+    find . -type f -exec du -h {} + | sort -rh | head -n 10
+}
+alias fb="findbig"

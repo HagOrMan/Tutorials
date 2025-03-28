@@ -5,15 +5,20 @@ But what if you could have it **both ways**? With **bash aliases**, you can turn
 
 **So let's get started! I'll show you how to begin building your *bash castle***, a collection of aliases to massively improve your efficiency and reduce characters typed by at least 75\% <sup>[\[1\]](#extra-notes)</sup>.
 
-# What Is Bash?
+# What Is Bash / Bash Aliases?
 This tutorial uses bash as a short form for "bash terminal", which refers to a Unix-like terminal. These terminals support aliases, whereas the default Windows terminals (e.g. Command Prompt and Powershell) do not.
+
+**What is an alias?** An alias is any shortcut for a command. It could be:
+- a literal shortcut, such as allowing you to type `g` instead of `git`
+- a [bash function](https://tldp.org/LDP/abs/html/functions.html), perhaps to [find the largest files in your current directory](./helper-files/bash/terminal.bashrc)
+- any combination of commands, including functions!
 
 If your terminal doesn’t support aliases, I highly recommend using Git Bash or another Unix-like terminal. I'm on Windows, so Git Bash is the simplest option <sup>[\[2\]](#extra-notes)</sup>.
 
-For this tutorial, you'll need what's known as a `.bashrc` file. This is found in your home directory, `~/`. It controls what is done on initialization of your terminal as well as allows you to create `aliases`, the main focus here. If it doesn't already exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
+For this tutorial, you'll need what's known as a `.bashrc` file. This is found in your home directory, `~/`. It controls what is done on initialization of your terminal as well as allows you to create aliases, the main focus here. If it doesn't already exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
 
 <details>
-    <summary>How do I create the bashrc file? <a href="#extra-notes"><sup>[3]</sup></a></summary>
+    <summary>How do I create the bashrc file? <sup><a href="#extra-notes">[3]</a></sup></summary>
 
     cd ~
     vim .bashrc
@@ -25,14 +30,23 @@ For this tutorial, you'll need what's known as a `.bashrc` file. This is found i
 ## Put It All Together
 Let's start by talking about how to make your aliases available in case you already have some ideas. If you want inspiration, you can skip to my aliases [here](#templates-to-help-you-get-started). 
 
-I recommend separating your aliases into clearly defined files such as `git.bashrc` (for all git-related aliases) since it's easier to manage. Once you have an alias file ready, take your `.bashrc` file at the home (`~/`) directory, and for each alias file add lines to `~/.bashrc` such as
+1. I recommend separating your aliases into clearly defined files such as [`git.bashrc`](./helper-files/bash/git.bashrc) (for all git-related aliases) since it's easier to manage
+2. Once you have an alias file ready, take your `.bashrc` file at the home (`~/`) directory, and for each alias file add lines to `~/.bashrc` such as
 ```bash
-# .bashrc file
 source ~/git.bashrc
 ```
-Now, run the following in your terminal (or just restart your terminal) to "activate" the file
+
+3. Now, run the following in your terminal (or just restart your terminal) to "activate" the `.bashrc` file
 ```bash
 source ~/.bashrc
+```
+
+For example, if you've copied all my files to your home (`~/`) directory, your `.bashrc` file should look like this
+```bash
+source ~/util.bashrc
+source ~/git.bashrc
+source ~/terminal.bashrc
+source ~/venv.bashrc
 ```
 
 ## What Should You Make?
@@ -50,7 +64,7 @@ With `gl`, I can specify more values that would come after `git log` if I wrote 
 
 > For commonly used additions, make a new alias
 
-A good example is `git log --all --graph --oneline --decorate -n 25`, which I alias with the simple `glg`. It produces a nice tree graph similar to what you'd see on VS Code.
+A good example is `git log --all --graph --oneline --decorate`, which I alias with the simple `glg`. It produces a nice tree graph similar to what you'd see on VS Code.
 
 # Finishing Notes
 I'm trying to keep this short and sweet, so hopefully the above gives enough inspiration to get you building without overloading the details. **At the end of the day, you will build what is best for you,** and maybe you'll find a better way to do things (and please let me know if you do).  
@@ -62,7 +76,7 @@ While you can absolutely start building your bash castle from scratch, here's wh
 
 - [utility functions](./helper-files/bash/util.bashrc). **Highly recommend at least checking out `confirm_action` which is extremely useful for never accidentally doing something catastrophic**
 - [useful git aliases](./helper-files/bash/git.bashrc). Almost every git command you'll need in common development. Requires the [utility functions file](./helper-files/bash/util.bashrc)
-- [terminal commands](./helper-files/bash/terminal.bashrc). Currently a small list, but might grow as I start doing cooler things in the terminal. (most commands in the terminal are already pretty concise though)
+- [terminal commands](./helper-files/bash/terminal.bashrc). Currently a small list, but might grow as I start doing cooler things in the terminal (common commands in the terminal are already pretty concise though)
 - [venv helpers](./helper-files/bash/venv.bashrc). Commands for virtual environments to speed up their creation and use
 
 # Extra Notes
