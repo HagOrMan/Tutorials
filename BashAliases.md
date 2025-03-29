@@ -30,7 +30,7 @@ For this tutorial, you'll need what's known as a `.bashrc` file. This is found i
 ## Put It All Together
 Let's start by talking about how to make your aliases available in case you already have some ideas. If you want inspiration, you can skip to my aliases [here](#templates-to-help-you-get-started). 
 
-1. I recommend separating your aliases into clearly defined files such as [`git.bashrc`](./helper-files/bash/git.bashrc) (for all git-related aliases) since it's easier to manage
+1. I recommend separating your aliases into clearly defined files such as [`git.bashrc`](./helper-files/bash/git.bashrc) (for all git-related aliases) since it is easier to manage and more portable
 2. Once you have an alias file ready, take your `.bashrc` file at the home (`~/`) directory, and for each alias file add lines to `~/.bashrc` such as
 ```bash
 source ~/git.bashrc
@@ -79,9 +79,62 @@ While you can absolutely start building your bash castle from scratch, here's wh
 - [terminal commands](./helper-files/bash/terminal.bashrc). Currently a small list, but might grow as I start doing cooler things in the terminal (common commands in the terminal are already pretty concise though)
 - [venv helpers](./helper-files/bash/venv.bashrc). Commands for virtual environments to speed up their creation and use
 
+# Test It Out!
+Want to feel like a pro with the new aliases you just made? I'll walk you through how to use them and what to expect! (assuming you're using my aliases and have git installed)
+
+1. In your terminal, navigate to any directory you want to store a new folder in. We're going to clone this repository in the folder that you go to
+```bash
+# assuming you want to clone it in your home directory
+cd ~
+gcl https://github.com/HagOrMan/Tutorials.git
+```
+
+2. Now navigate into the repo
+```bash
+cd tutorials
+```
+
+3. Let's start by seeing the top files in the repo, sorted by size
+```bash
+fb
+```
+
+4. Now list all files in the root folder of the repo, including hidden files/folders (namely `.git/`)
+```bash
+lla
+```
+
+5. That's a lot on the terminal screen. Let's clear it with an alias
+```bash
+c
+```
+
+6. Now let's check out the version history in a nice graph (type `q` to exit the graph)
+```bash
+glg
+```
+
+7. Let's see what files were modified between some of these commits. I'm taking the commit hashes<sup>[\[4\]](#extra-notes)</sup> seen in the above command to view what changed between the first commit and the second
+```bash
+changedfiles ad5ff69 9990aa0
+```
+You should see that `helper-files/bash/venv.bashrc` was modified between those commits.
+
+8. Now let's view the actual content changes in the file. 
+```bash
+diff-words ad5ff69 9990aa0
+```
+You should see 3 lines of green text, the green indicating that I added those 3 lines to the file.
+
 # Extra Notes
 \[1\] The 75% statistic was taken by looking at all of my current aliases, especially the ones I use most like `git status` &#8594; `gs` (10 characters &#8594; 2 characters), and the fact that using functions in aliases drastically reduces keystrokes. If you write a couple short aliases and are satisfied, you may benefit from a 30-50% keystroke reduction instead.
 
 \[2\] While Git Bash is the most lightweight Unix-like terminal on Windows that I've found, some alternatives exist. Windows has what's called [**Windows Subsystem for Linux (WSL)**](https://learn.microsoft.com/en-us/windows/wsl/install) that allows you to install a Linux distribution with much more functionality than Git Bash (but is conversely less lightweight).
 
 \[3\] To create the file, you can either go through your file explorer or terminal. If you're using the terminal, there are multiple file editors that you can use. I use [vim](https://github.com/vim/vim), and if you're confused on how to edit or save files, I recommend [this tutorial](https://opensource.com/article/19/3/getting-started-vim).
+
+\[4\] Commit hashes are unique identifiers associated with a given change to a repository. In the [6th step above](#test-it-out), the output may include
+```
+* 9990aa0 feat: add pip list commands to venv.bashrc
+```
+This shows the commit hash (`9990aa0`), and beside it, the commit message I wrote when making that change. The uniqueness of commit hashes is very useful, such as allowing us to make comparisons between commits, as seen in the [7th and 8th steps above](#test-it-out).
