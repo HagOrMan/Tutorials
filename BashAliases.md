@@ -1,27 +1,27 @@
 # Why Should You Care About Bash Aliases?
 The reason you're using `git log` and not `git log --all --graph --oneline --decorate`, even though it could **change your life as a developer** (seriously, try it right now), is because it's too long to type and too hard to remember.
 
-But what if you could have it **both ways**? With **bash aliases**, you can turn long, tedious commands into **effortless shortcuts**, like typing `glg` instead of that entire command above.
+But what if you could keep the power of that lengthy command and still type something **simple**? With **bash aliases**, you can turn long, tedious commands into **effortless shortcuts**, like typing `glg` instead of that entire command above.
 
 **So let's get started! I'll show you how to begin building your *bash castle***, a collection of aliases to massively improve your efficiency and reduce characters typed by at least 75\% <sup>[\[1\]](#extra-notes)</sup>.
 
 # What Is Bash / Bash Aliases?
-This tutorial uses bash as a short form for "bash terminal", which refers to a Unix-like terminal. These terminals support aliases, whereas the default Windows terminals (e.g. Command Prompt and Powershell) do not.
+This tutorial uses bash as a short form for "bash terminal", which refers to Unix-like terminals such as Linux terminals, macOS's terminal, and Git Bash on Windows. These terminals support aliases, whereas the default Windows terminals (e.g. Command Prompt and Powershell) do not.
 
 **What is an alias?** An alias is any shortcut for a command. It could be:
 - a literal shortcut, such as allowing you to type `g` instead of `git`
-- a [bash function](https://tldp.org/LDP/abs/html/functions.html), perhaps to [find the largest files in your current directory](./helper-files/bash/terminal.bashrc)
+- a [bash function](https://tldp.org/LDP/abs/html/functions.html), like one that will [find the largest files in your current directory](./helper-files/bash/terminal.bashrc)
 - any combination of commands, including functions!
 
-If your terminal doesn’t support aliases, I highly recommend using Git Bash or another Unix-like terminal. I'm on Windows, so Git Bash is the simplest option <sup>[\[2\]](#extra-notes)</sup>.
+If your terminal doesn’t support aliases, I recommend using Git Bash. I'm on Windows, so Git Bash is the simplest option <sup>[\[2\]](#extra-notes)</sup>.
 
-For this tutorial, you'll need what's known as a `.bashrc` file. This is found in your home directory, `~/`. It controls what is done on initialization of your terminal as well as allows you to create aliases, the main focus here. If it doesn't already exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
+For this tutorial, you'll need what's known as a `.bashrc` file. This is a configuration file located in your home directory, `~/`. It controls what is done on initialization of your terminal as well as allows you to create aliases, the main focus here. If it doesn't already exist, you can just create the file and start adding lines like `alias gs='git status'`! Now the next time you open your terminal, you can run `gs` instead of typing out the full thing.
 
 <details>
     <summary>How do I create the bashrc file? <sup><a href="#extra-notes">[3]</a></sup></summary>
 
-    cd ~
-    vim .bashrc
+    cd ~   # go to your home directory
+    vim .bashrc   # open or create the .bashrc file
     # if you don't have vim, nano and vi are other text editors you can use
 
 </details>
@@ -31,17 +31,21 @@ For this tutorial, you'll need what's known as a `.bashrc` file. This is found i
 Let's start by talking about how to make your aliases available in case you already have some ideas. If you want inspiration, you can skip to my aliases [here](#templates-to-help-you-get-started). 
 
 1. I recommend separating your aliases into clearly defined files such as [`git.bashrc`](./helper-files/bash/git.bashrc) (for all git-related aliases) since it is easier to manage and more portable
-2. Once you have an alias file ready, take your `.bashrc` file at the home (`~/`) directory, and for each alias file add lines to `~/.bashrc` such as
+
+2. Once you’ve created your alias files, you’ll need to make them available in your terminal. You do this by editing your `.bashrc` file (in your home directory, `~/`). Add a line like this for each alias file you’ve created:
 ```bash
 source ~/git.bashrc
 ```
 
-3. Now, run the following in your terminal (or just restart your terminal) to "activate" the `.bashrc` file
+3. Now, you need to "activate" the `.bashrc` file. Run the following in your terminal (or alternatively restart your terminal)
 ```bash
 source ~/.bashrc
 ```
 
-For example, if you've copied all my files to your home (`~/`) directory, your `.bashrc` file should look like this
+---
+
+**Example Setup:**  
+If you've copied all my files to your home (`~/`) directory, your `.bashrc` file should look like this
 ```bash
 source ~/util.bashrc
 source ~/git.bashrc
@@ -51,11 +55,12 @@ source ~/venv.bashrc
 
 ## What Should You Make?
 As you probably know, classic commands like `ls` and `ls -a` or even `ls -al` are already short enough that you don't need to optimize them.
-> What's really useful is **longer commands** and commands that **require some scripting to work**.
 
-You can write functions and then use them in an alias to achieve powerful outcomes. For example, in my [`util.bashrc`](./helper-files/bash/util.bashrc) file, I have a `confirm_action` function that lets me lock dangerous commands (e.g. discarding all my changes in git) behind a confirmation that asks me if I'm sure I'd like to do that.
+> What's really useful is **longer commands** and commands that **require some scripting to work**. Aliases reduce your mental load of remembering these commands and typing them out every time.
 
-> As you try new things and start developing, figure out what commands you run often. If you're taking a while to do something, look it up, ask an AI model, and see if there's a faster way to do it. Eventually, you'll find complex commands that would go great behind a bash alias.
+You can write functions and then use them in an alias to achieve powerful outcomes. For example, in my [`util.bashrc`](./helper-files/bash/util.bashrc) file, I have a `confirm_action` function that ensures I don't run dangerous commands (e.g., discarding all my changes in git) without confirming that I'm sure.
+
+> As you try new things and develop, figure out what commands you run often. If you're taking a while to do something, look it up, ask an AI model, and see if there's a faster way. These commands make great aliases - and the seconds they save will add up.
 
 For me, a lot of my aliases are also git commands that I run often. **I do anything to reduce friction in my development**, even turning something as short as `git log` into `gl`.
 > Keep your commands simple so you can easily add to them
@@ -64,7 +69,7 @@ With `gl`, I can specify more values that would come after `git log` if I wrote 
 
 > For commonly used additions, make a new alias
 
-A good example is `git log --all --graph --oneline --decorate`, which I alias with the simple `glg`. It produces a nice tree graph similar to what you'd see on VS Code.
+A good example is `git log --all --graph --oneline --decorate`, which I alias with the simple `glg`. It produces a nice tree graph similar to what you might see in GitHub or VS Code.
 
 # Finishing Notes
 I'm trying to keep this short and sweet, so hopefully the above gives enough inspiration to get you building without overloading the details. **At the end of the day, you will build what is best for you,** and maybe you'll find a better way to do things (and please let me know if you do).  
