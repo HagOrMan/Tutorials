@@ -9,10 +9,12 @@ alias diff-words="git diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)
 alias changedfiles='git diff-tree --no-commit-id -r --name-only'
 
 alias ga='git add' # use: `ga file.py` to stage specific files
-alias gaa='git add .' # use: `gaa` to stage all files
+alias gaa='git add -A' # use: `gaa` to stage all files
 alias grs='git restore --staged' # use: `grs file.py` to unstage specific files
 alias grsa='git restore --staged .' # use: `grs file.py` to unstage all files
 alias gc='git commit -m' # use: `gc "commit message"` to commit
+alias gchp='git cherry-pick' # use: `gchp {SHA}` to cherry pick a specific hash
+alias gchpnc='git cherry-pick --no-commit' # cherry picks but stages changes
 alias gpll='git pull'
 alias gplr='git pull --rebase'
 alias gplsf='git pull --squash --ff'
