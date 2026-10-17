@@ -304,7 +304,7 @@ Here's how I look through code changes! I prefer this to VSCode because I can cl
 ![my terminal setup in full with my typical web dev layout](./assets/ultimate-coding-setup/terminal-setup-full.png)
 The same photo as the start, but now I'll go more in depth. Majority of the screen goes to Claude Code for viewing everything nicely. The top right is for my git commands, so my workflow is `gaa` to stage the files and then `gc "feat: what I changed"`, and finally `gpsh` to upload the changes to GitHub.
 
-The bottom right section is just for running `pnpm dev` and other commands, as you can see by the code from running the website locally like `Get / 200 in 487 ms` being when I went on the main page of my website.
+The bottom right section is just for running `pnpm dev` and other commands, as you can see by the code from running the website locally like `Get /blog-assets/...` being when I tried viewing this very blog.
 
 Fun fact: this colour scheme is the same as my light mode one in Zed!
 
