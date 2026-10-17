@@ -175,7 +175,7 @@ Host myserver
 
 # Bash
 
-On Windows, being able to use bash commands is so helpful. My favourite bit is aliases which I have another [tutorial](BashAliases.md) on, and I've shared all my aliases on GitHub [here](helper-files/bash/).
+On Windows, being able to use bash commands is so helpful. My favourite bit is aliases which I have another [tutorial](BashAliases.md) on, and I've shared all my aliases on GitHub [here](./helper-files/bash/git.bashrc).
 
 Because it isn't included there, but needed for it to work, you also have to make a `.bashrc` file if you don't have one already. My setup is all of the helper `*.bashrc` files are in `~/bash_helpers/`, just to keep things clean.
 
