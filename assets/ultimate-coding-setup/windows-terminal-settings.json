@@ -1,0 +1,105 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "theme": "light",
+  "copyFormatting": "none",
+  "copyOnSelect": false,
+
+  "actions": [
+    {
+      "command": { "action": "setColorScheme", "colorScheme": "Lush-Dark" },
+      "id": "User.setColorScheme.LushDark"
+    },
+    {
+      "command": { "action": "setColorScheme", "colorScheme": "Nebula-Light" },
+      "id": "User.setColorScheme.NebulaLight"
+    }
+  ],
+
+  "keybindings": [
+    { "id": "User.setColorScheme.LushDark", "keys": "ctrl+alt+d" },
+    { "id": "User.setColorScheme.NebulaLight", "keys": "ctrl+alt+l" },
+    { "id": "Terminal.FindText", "keys": "ctrl+shift+f" },
+    { "id": "Terminal.DuplicatePaneAuto", "keys": "alt+shift+d" }
+  ],
+
+  "profiles": {
+    "defaults": {
+      "colorScheme": "Teal-Purple-Light",
+      "font": {
+        "face": "Consolas"
+      }
+    }
+  },
+
+  "schemes": [
+    {
+      "name": "Lush-Dark",
+      "background": "#061316",
+      "foreground": "#DCEBEF",
+      "cursorColor": "#32CFAC",
+      "selectionBackground": "#0D2B2F",
+      "black": "#0B1D21",
+      "red": "#A82525",
+      "green": "#1FA968",
+      "yellow": "#D4A017",
+      "blue": "#2F93C8",
+      "purple": "#7073FF",
+      "cyan": "#17A689",
+      "white": "#DCEBEF",
+      "brightBlack": "#183238",
+      "brightRed": "#E65D73",
+      "brightGreen": "#2ECC71",
+      "brightYellow": "#F1C40F",
+      "brightBlue": "#90C9E9",
+      "brightPurple": "#99A4FF",
+      "brightCyan": "#32CFAC",
+      "brightWhite": "#F0FDF9"
+    },
+    {
+      "name": "Nebula-Light",
+      "background": "#EDEDFF",
+      "foreground": "#27184E",
+      "cursorColor": "#6B3DEE",
+      "selectionBackground": "#C4C4FF",
+      "black": "#27184E",
+      "red": "#D9425A",
+      "green": "#1B7340",
+      "yellow": "#B8860B",
+      "blue": "#006EA5",
+      "purple": "#6B3DEE",
+      "cyan": "#008575",
+      "white": "#DFE0FF",
+      "brightBlack": "#4B3D6B",
+      "brightRed": "#E65D73",
+      "brightGreen": "#1D9E56",
+      "brightYellow": "#D4A017",
+      "brightBlue": "#008ACC",
+      "brightPurple": "#8E80FF",
+      "brightCyan": "#00D1B0",
+      "brightWhite": "#FFFFFF"
+    },
+    {
+      "name": "Teal-Purple-Light",
+      "background": "#F4F7F6",
+      "foreground": "#2E3440",
+      "cursorColor": "#008B8B",
+      "selectionBackground": "#E2D4EA",
+      "black": "#2E3440",
+      "red": "#C4384B",
+      "green": "#1E8E6E",
+      "yellow": "#B58900",
+      "blue": "#3B6998",
+      "purple": "#7B4B94",
+      "cyan": "#0E8A8A",
+      "white": "#E5E9F0",
+      "brightBlack": "#4C566A",
+      "brightRed": "#D9534F",
+      "brightGreen": "#28A745",
+      "brightYellow": "#E0A800",
+      "brightBlue": "#4A90E2",
+      "brightPurple": "#9B59B6",
+      "brightCyan": "#17A2B8",
+      "brightWhite": "#FFFFFF"
+    }
+  ]
+}

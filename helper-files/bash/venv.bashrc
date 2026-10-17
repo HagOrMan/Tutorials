@@ -2,6 +2,7 @@
 
 # venv related
 alias nvenv='python -m venv .venv' # make a new venv
+alias nvenv14='"C:\Windows\py.exe" -m venv .venv'
 alias venv='source .venv/Scripts/activate'  # Quickly activate a Python virtualenv
 
 # package related

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # All the git commands I want to run with aliases
-source ~/util.bashrc
+source ~/bash_helpers/util.bashrc
 
 alias gl='git log'
 alias glg='git log --all --graph --oneline --decorate'
@@ -51,4 +51,16 @@ delete_branches_with_no_upstream() {
 }
 # Delete any branches that have no upstream (often run after `gfp`)
 alias gbdnu='delete_branches_with_no_upstream'
+
+# ------- Repo specific git ------- #
+
+# --- Blogs
+blogpush() {
+  local msg="${1:-update}"
+  local vault_root
+  vault_root="$(git rev-parse --show-toplevel)"
+  git -C "$vault_root/personal-storage/personal/blogs" add -A
+  git -C "$vault_root/personal-storage/personal/blogs" commit -m "$msg" || true
+  git -C "$vault_root/personal-storage/personal/blogs" push origin
+}
 
