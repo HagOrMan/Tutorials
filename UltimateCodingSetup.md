@@ -122,7 +122,7 @@ First off, an example of why this is useful: I'm running a command on my device 
 
 So, **Windows Terminal** has to be the best thing for terminal work, especially since newer versions of Git Bash automatically integrate with it when you install them. It's a lot faster because it's native to Windows, so integrate with Windows Terminal rather than using the standalone Git Bash app.
 
-I also have all my commands and colour schemes available [here](assets/ultimate-coding-setup/windows-terminal-settings.json)! Just copy the sections you want (e.g., the `schemes` section) into your Windows terminal `settings.json`. Access it by clicking `Ctrl+,` and then clicking `Open JSON File` in the bottom left.
+I also have all my commands and colour schemes available [here](helper-files/ultimate-coding-setup/windows-terminal-settings.json)! Just copy the sections you want (e.g., the `schemes` section) into your Windows terminal `settings.json`. Access it by clicking `Ctrl+,` and then clicking `Open JSON File` in the bottom left.
 
 ## Coding Environments (Virtual Environments and more)
 
@@ -276,7 +276,7 @@ Zed has such a clean layout and I find it much more responsive than VSCode. I'll
 - I much prefer their Git Diff where you view the changes to all the files since your last commit. It lets you scroll through all them like in GitHub (when you're reviewing a PR) and check each one off as you go.
 - Collaborative coding feels much smoother. I've tried the VSCode Liveshare before but Zed project sharing has worked a lot better for me.
 
-I've also shared my Zed colour schemes [here](assets/ultimate-coding-setup/nebula-lush.json)! Just add it to your user profile at `\AppData\Roaming\Zed\themes`.
+I've also shared my Zed colour schemes [here](helper-files/ultimate-coding-setup/nebula-lush.json)! Just add it to your user profile at `\AppData\Roaming\Zed\themes`.
 
 ## Colour Schemes
 
@@ -286,7 +286,7 @@ What I did is I started by taking the colour scheme of my website. I made this w
 
 ### Adding The Colour Scheme in Zed
 
-For Zed, if you want to add it, find it [here](assets/ultimate-coding-setup/nebula-lush.json)! Just add it to your user profile at `\AppData\Roaming\Zed\themes`. After that, Zed automatically detects it. In my Zed settings.json, I also added
+For Zed, if you want to add it, find it [here](helper-files/ultimate-coding-setup/nebula-lush.json)! Just add it to your user profile at `\AppData\Roaming\Zed\themes`. After that, Zed automatically detects it. In my Zed settings.json, I also added
 
 ```json
 "theme": {
@@ -313,7 +313,7 @@ You can get to the keymap by clicking `ctrl+,` to open settings, then typing `ke
 
 ### Adding The Colour Scheme in Windows Terminal
 
-You can access my colour scheme [here](assets/ultimate-coding-setup/windows-terminal-settings.json)! Just copy the sections you want (e.g., the `schemes` section) into your Windows terminal `settings.json`. Access it by clicking `Ctrl+,` and then clicking `Open JSON File` in the bottom left.
+You can access my colour scheme [here](helper-files/ultimate-coding-setup/windows-terminal-settings.json)! Just copy the sections you want (e.g., the `schemes` section) into your Windows terminal `settings.json`. Access it by clicking `Ctrl+,` and then clicking `Open JSON File` in the bottom left.
 
 You'll also notice some other commands in there. A few of these let me press `ctrl+alt+l` to switch to light mode and `ctrl+alt+d` for dark mode. Pretty cool if I may say so myself.
 
