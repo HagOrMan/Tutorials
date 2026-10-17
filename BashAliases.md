@@ -173,7 +173,7 @@ You should see 3 lines of green text, the green indicating that I added those 3 
 
 \[4\] Commit hashes are unique identifiers associated with a given change to a repository. In the [6th step above](#test-it-out), the output may include
 
-```
+```bash
 * 9990aa0 feat: add pip list commands to venv.bashrc
 ```
 

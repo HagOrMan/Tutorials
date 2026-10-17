@@ -12,13 +12,13 @@ This is by no means a comprehensive list of terminal commands (in linux shells).
 
 **To see your current CPU usage**, run
 
-```
+```bash
 htop
 ```
 
 **To see your current GPU usage**, run
 
-```
+```bash
 watch -n0.1 nvidia-smi
 ```
 
@@ -26,7 +26,7 @@ The `-n` specifies the intervals that you want it to refresh in seconds.
 
 To see your disk space usage and refresh it once every 10 seconds, you can also do something like
 
-```
+```bash
 watch -n 10 df -h
 ```
 
@@ -34,7 +34,7 @@ However, in most cases you probably don't need to look at your storage more than
 
 **To check information about space in your filesystem**, use
 
-```
+```bash
 df -h
 ```
 
@@ -44,7 +44,7 @@ As a fun segway from that, I then wanted to save the models to my mount folder s
 
 **To give permissions to `/mnt`**, or I guess any other folder/file, run
 
-```
+```bash
 sudo chmod -R 777 /mnt
 ```
 
@@ -53,6 +53,6 @@ The `sudo` also effectively runs the command as an admin, so be careful when usi
 
 **To see the file size of everything in your current directory**, run
 
-```
+```bash
 du -h --max_depth=1 .
 ```
