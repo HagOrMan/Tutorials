@@ -14,36 +14,6 @@ As a preview, here's my terminal setup for a typical website coding session. AI 
 
 This lets me do my prompting in the main screen, use git commands to commit and push when I'm happy in the top right, and run the local dev server in the bottom right corner (which is the smallest because I'm just running `pnpm dev` to start the website and don't need to see anything). When it comes to my full workflow, I used VSCode and am shifting to Zed to view the git diffs before I commit any code.
 
-# Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Navigating this guide](#navigating-this-guide)
-- [My Overall Setup](#my-overall-setup)
-  - [Where I Code - VSCode](#where-i-code---vscode)
-  - [Storing My Code - GitHub](#storing-my-code---github)
-  - [Operating System Environments](#operating-system-environments)
-    - [OS Level](#os-level)
-    - [Package Managers - Chocolatey](#package-managers---chocolatey)
-  - [Terminal Work - Windows Terminal](#terminal-work---windows-terminal)
-  - [Coding Environments (Virtual Environments and more)](#coding-environments-virtual-environments-and-more)
-    - [Python Environments - python venv \& conda](#python-environments---python-venv--conda)
-    - [TypeScript Environments - pnpm](#typescript-environments---pnpm)
-    - [Node Environments - fast node manager (fnm)](#node-environments---fast-node-manager-fnm)
-  - [ssh - using Git Bash](#ssh---using-git-bash)
-    - [ssh Config](#ssh-config)
-- [Bash](#bash)
-- [Adding Shortcuts to Speed Up Everything Else](#adding-shortcuts-to-speed-up-everything-else)
-- [Extensions to Previous Sections](#extensions-to-previous-sections)
-  - [Where I Code - Zed](#where-i-code---zed)
-  - [Colour Schemes](#colour-schemes)
-    - [Adding The Colour Scheme in Zed](#adding-the-colour-scheme-in-zed)
-    - [Adding The Colour Scheme in Windows Terminal](#adding-the-colour-scheme-in-windows-terminal)
-- [Coding Photos](#coding-photos)
-  - [File Editing - Zed](#file-editing---zed)
-  - [Viewing Code Changes - Zed](#viewing-code-changes---zed)
-  - [AI Coding and Running Websites - Windows Terminal with Git Bash](#ai-coding-and-running-websites---windows-terminal-with-git-bash)
-- [More Design-Focused Apps](#more-design-focused-apps)
-
 # Navigating this guide
 
 I'll start with my main setup for programming, then get into aspects of it used for efficiency that seem more generalizeable to developers overall. These will be broken into sections that are hopefully clear based on the table of contents. Each section will start with the goal or problem I'm solving, and end in specifically how I accomplished it. I'll later get into other parts of my setup that I still feel might be valuable to someone. Scattered between, I'll include alternatives or other thoughts for stuff I haven't tried but think might be helpful.
