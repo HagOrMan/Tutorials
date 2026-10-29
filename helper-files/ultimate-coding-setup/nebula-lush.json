@@ -68,7 +68,42 @@
           {
             "cursor": "#6B3DEE",
             "background": "#6B3DEE",
-            "selection": "#C4C4FF88"
+            "selection": "#6B3DEE3D"
+          },
+          {
+            "cursor": "#008575",
+            "background": "#008575",
+            "selection": "#00857538"
+          },
+          {
+            "cursor": "#006EA5",
+            "background": "#006EA5",
+            "selection": "#006EA538"
+          },
+          {
+            "cursor": "#B8860B",
+            "background": "#B8860B",
+            "selection": "#B8860B38"
+          },
+          {
+            "cursor": "#D9425A",
+            "background": "#D9425A",
+            "selection": "#D9425A38"
+          },
+          {
+            "cursor": "#1B7340",
+            "background": "#1B7340",
+            "selection": "#1B734038"
+          },
+          {
+            "cursor": "#8E24AA",
+            "background": "#8E24AA",
+            "selection": "#8E24AA38"
+          },
+          {
+            "cursor": "#E65100",
+            "background": "#E65100",
+            "selection": "#E6510038"
           }
         ],
         "syntax": {
@@ -153,7 +188,42 @@
           {
             "cursor": "#32CFAC",
             "background": "#32CFAC",
-            "selection": "#0D2B2FBB"
+            "selection": "#32CFAC40"
+          },
+          {
+            "cursor": "#99A4FF",
+            "background": "#99A4FF",
+            "selection": "#99A4FF38"
+          },
+          {
+            "cursor": "#90C9E9",
+            "background": "#90C9E9",
+            "selection": "#90C9E938"
+          },
+          {
+            "cursor": "#E65D73",
+            "background": "#E65D73",
+            "selection": "#E65D7338"
+          },
+          {
+            "cursor": "#F1C40F",
+            "background": "#F1C40F",
+            "selection": "#F1C40F38"
+          },
+          {
+            "cursor": "#2ECC71",
+            "background": "#2ECC71",
+            "selection": "#2ECC7138"
+          },
+          {
+            "cursor": "#E082FF",
+            "background": "#E082FF",
+            "selection": "#E082FF38"
+          },
+          {
+            "cursor": "#FF9E64",
+            "background": "#FF9E64",
+            "selection": "#FF9E6438"
           }
         ],
         "syntax": {
